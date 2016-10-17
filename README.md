@@ -1,2 +1,3 @@
 # LaserBeamProperties
-Matlab program for varying  laser beam properties. you can edit the laser beam properties like focus point, strength of the beam and velocity in which the beam travels. You can also change the type of laser beam and play with all the data and generate an awesome graph
+# Mathematical modeling of LASER keyhole using MATLAB.
+Comparing two heat fluxes (front and rear) to corresponding local beam power densities of given LASER. Iterative calculation of keyhole using material constants, given speed, and finding a unique solutions that matches the radius and angles matching the power densities/flux.
