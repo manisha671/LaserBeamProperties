@@ -1,4 +1,4 @@
-%Exercise Beta - Weld resolidification path
+%Weld resolidification path
 
 % MATERIAL properties - change here
 Ta=293; Tm = 1730; K=24; kappa=7.6*10^(-6); A=0.1;
@@ -41,8 +41,6 @@ while ((y < ymax) && (nofront == 0))
         x=x-dx;
     end
 
-% ADD HERE THE CALCULATION OF THE RESOLIDIFICATION PATH
-% ADD HERE THE CALCULATION OF THE COOLING RATE (IF REQUESTED)
 
     xr(i)=x;
 %    fprintf(1,'%3.0d %3.0d  y/x %4.2f/%4.2f   T %4.0f      xf %4.2f  xr %4.2f    dTxy %4.3f %4.3f\n',i,j,y*1e3,x*1e3,T,xf(i),xr(i),dTx,dTy); 

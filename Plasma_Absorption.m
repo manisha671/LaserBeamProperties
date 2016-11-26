@@ -1,4 +1,4 @@
-%Exercise Gamma - PLASMA ABSORPTION
+%PLASMA ABSORPTION
 
 % constants
 kb=1.38*10^(-23); hs=1.054*10^(-34); h=hs*2*pi; e=1.602*10^(-19);
@@ -38,10 +38,7 @@ for T=1000:100:40000
     c4=c1*c2*c3;
     p=c4; q=-n0*c4;
     ni=-p/2+sqrt(p*p/4-q); nn=n0-ni; ionperc=ni/n0; 
-    
-% THE CALCULATION OF THE ABSORPTION COEFFICIENT IS MISSING - PLEASE ADD
 
-% THE CALCULATION OF THE BEAM ABSORPTION/ATTENUATION PER LENGTH IS MISSING - PLEASE ADD
 
     T1(i)=T; ion(i)=ionperc; ni1(i)=ni; aib1(i)=aib;
     fprintf(1,'T %4.0f   ni %3.2e   ioniz %3.0f [prc]   aib %3.2f [1/cm]  A %3.2f [prc]\n',T,ni,ionperc*100,ion/100,(1-exp(-aib*10^-3))*100);
