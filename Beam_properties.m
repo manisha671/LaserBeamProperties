@@ -3,7 +3,7 @@ Ta=293; Tm = 1730; Tv = 2800; K=36; kappa=7.5*10^(-6); rho=6430; cp=743;
 A=0.55; 
 %constant parameters
 D=5e-3; lambda=10.64e-6; p= 1000; d=8e-3;
-%cases (CHANGE VALUES HERE)
+%cases 
 M2=1; f=150e-3; v=8/60;
 % THE CALCULATION OF THE BEAM PROPERTIES
 
@@ -40,7 +40,7 @@ while ((rkh>1e-6)&(z<d))
     xf=xf-dz*tan(thf); xr=xr+dz*tan(thr);
     rkh=(xf-xr)/2;
     
-    % THE POWER DENSITY FROM THE LASER BEAM IS MISSING FOR THE ENERGY BALANCE
+    
     rfz = rfo*(sqrt(1 + (z/zr)^2));
     If = ((2*p)/((rfz)^2*pi))* exp(-2*xf^2/rfz^2);
     Ir = ((2*p)/((rfz)^2*pi))* exp(-2*xr^2/rfz^2);
@@ -60,7 +60,6 @@ while ((rkh>1e-6)&(z<d))
 end;
 fprintf(1,'Bottom: z %4.0f  xf %4.0f  xr %4.0f  rkh %4.0f\n',z*1e6,xf*1e6,xr*1e6,rkh*1e6);
 
-%hold off; %'hold all' for multiple curves or 'hold off' for a single graph
 plot(xf1,z1,xr1,z1);
 hold all;
 

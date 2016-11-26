@@ -44,9 +44,9 @@ for T=1000:100:40000
     fprintf(1,'T %4.0f   ni %3.2e   ioniz %3.0f [prc]   aib %3.2f [1/cm]  A %3.2f [prc]\n',T,ni,ionperc*100,ion/100,(1-exp(-aib*10^-3))*100);
 end
 
-%outpt plot - activate the one you choose 
+ 
 % for plotting two curves: plot(T1,ni1,T1,ni2);
-hold off; %or: 'hold all' for multiple curves or 'hold off' for a single graph
+hold off;
 
 plot(T1,ni1); 
 %plot(T1,aib1);

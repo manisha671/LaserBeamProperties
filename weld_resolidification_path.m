@@ -1,10 +1,10 @@
 %Weld resolidification path
 
-% MATERIAL properties - change here
+% MATERIAL properties 
 Ta=293; Tm = 1730; K=24; kappa=7.6*10^(-6); A=0.1;
 fprintf(1,'NEW RUN!!\n');
 
-%PARAMETERS - change here for the two cases
+%PARAMETERS
 v=1/60; PL = 200;
 
 dx=1e-5; dy=1e-5; dxf=1e-6; % resolution
@@ -48,6 +48,6 @@ while ((y < ymax) && (nofront == 0))
     i=i+1; y = y+dy;
 end
 
-hold off; %'hold all' for multiple curves or 'hold off' for a single graph
-plot(xr,yi,xf,yi); % EXTEND THE PLOT: You can add the solidification path in the ouput by one more variable pair s1,yi
+hold off; 
+plot(xr,yi,xf,yi); 
 hold all;

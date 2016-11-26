@@ -1,6 +1,6 @@
-% Keyhole;  solution file ready to run
+% Keyhole;  
 
-%Material properties (USE YOUR MATERIAL)
+%Material properties 
 Ta=293; Tm = 1730; Tv = 2800; K=36; kappa=7.5*10^(-6); rho=6430; cp=743;
 A=0.55; 
 clear xf1 xr1 z1;
@@ -8,7 +8,7 @@ clear xf1 xr1 z1;
 %constant parameters
 D=5e-3; lambda=1070*10^(-9); PL=5000; d=7e-3;
 
-%cases (CHANGE VALUES HERE)
+%cases 
 M2=2.5; f=500e-3; v=12/60; 
 
 
@@ -47,7 +47,7 @@ while ((rkh>1e-6)&(z<d))
     xf=xf-dz*tan(thf); xr=xr+dz*tan(thr);
     rkh=(xf-xr)/2;
     
-% THE POWER DENSITY FROM THE LASER BEAM IS MISSING FOR THE ENERGY BALANCE - PLEASE ADD
+% THE POWER DENSITY FROM THE LASER BEAM 
     
     rfz = rf0*sqrt(1+(z/zr)^2);
     If = (2*PL)/(rfz^2*pi())*exp((-2*xf^2)/(rfz^2));
@@ -67,6 +67,6 @@ while ((rkh>1e-6)&(z<d))
 end;
 fprintf(1,'Bottom: z %4.0f  xf %4.0f  xr %4.0f  rkh %4.0f\n',z*1e6,xf*1e6,xr*1e6,rkh*1e6);
 
-%hold off; %'hold all' for multiple curves or 'hold off' for a single graph
+
 plot(xf1,z1,xr1,z1);
 hold all;
